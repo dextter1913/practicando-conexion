@@ -19,9 +19,16 @@
     <input type="text" name="Telefono" id="telefono"><br><br>
     <input type="submit" value="Registrar" name="btnregistrar">
     </form>
-    <?php 
+    <?php
     if (isset($_POST['btnregistrar'])) {
-       include("conexion.php");
+        include("./clases/conexion.php");
+
+        $_id = $_POST['id'];
+        $_nombre = $_POST['Nombre'];
+        $_apellido = $_POST['Apellido'];
+        $_telefono = $_POST['Telefono'];
+        $conexion->query("INSERT INTO $tabla(ID, Nombre, Apellido, Telefono) VALUES('$_id','$_nombre','$_apellido','$_telefono')");
+        include("./clases/cerrar.php");
     }
     ?>
     </center>

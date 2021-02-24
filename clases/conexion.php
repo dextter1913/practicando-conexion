@@ -7,7 +7,7 @@ $tabla = "ciente";
 
 error_reporting(0);
 
-$conexion = new mysqli($host,$BaseDatos,$usuario,$contraseña);
+$conexion = new mysqli($host,$usuario,$contraseña,$BaseDatos);
 
 if ($conexion->connect_errno) {
     echo "Nuestro sitio experimenta fallos...";
