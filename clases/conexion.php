@@ -3,7 +3,8 @@ $host = "localhost";
 $BaseDatos = "practica";
 $usuario = "root";
 $contraseña = "";
-$tabla = "ciente";
+
+$tabla = "cliente";
 
 error_reporting(0);
 

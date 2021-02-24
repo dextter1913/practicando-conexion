@@ -9,8 +9,8 @@
 <body>
     <center><h1>Practicando conexion</h1>
     <form action="index.php" method="post">
-    <label for="Id">Documento:</label>
-    <input type="text" name="id" id="Id"><br><br>
+    <label for="ID">Documento:</label>
+    <input type="text" name="ID" id="ID"><br><br>
     <label for="nombre">Nombre:</label>
     <input type="text" name="Nombre" id="nombre"><br><br>
     <label for="apellido">Apelido:</label>
@@ -21,14 +21,15 @@
     </form>
     <?php
     if (isset($_POST['btnregistrar'])) {
-        include("./clases/conexion.php");
 
-        $_id = $_POST['id'];
+        include("./clases/conexion.php");
+        $_id = $_POST['ID'];
         $_nombre = $_POST['Nombre'];
         $_apellido = $_POST['Apellido'];
         $_telefono = $_POST['Telefono'];
         $conexion->query("INSERT INTO $tabla(ID, Nombre, Apellido, Telefono) VALUES('$_id','$_nombre','$_apellido','$_telefono')");
         include("./clases/cerrar.php");
+        echo "se insertaron correctamente os datos";
     }
     ?>
     </center>
