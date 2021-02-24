@@ -9,6 +9,8 @@
 <body>
     <center><h1>Practicando conexion</h1>
     <form action="index.php" method="post">
+    <label for="Id">Documento:</label>
+    <input type="text" name="id" id="Id"><br><br>
     <label for="nombre">Nombre:</label>
     <input type="text" name="Nombre" id="nombre"><br><br>
     <label for="apellido">Apelido:</label>
