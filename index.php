@@ -17,9 +17,13 @@
     <input type="text" name="Apellido" id="apellido"><br><br>
     <label for="telefono">Telefono:</label>
     <input type="text" name="Telefono" id="telefono"><br><br>
-    <input type="submit" value="Registrar">
+    <input type="submit" value="Registrar" name="btnregistrar">
     </form>
-    
+    <?php 
+    if (isset($_POST['btnregistrar'])) {
+       include("conexion.php");
+    }
+    ?>
     </center>
 
 </body>
